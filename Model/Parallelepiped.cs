@@ -62,19 +62,23 @@ namespace Model
             }
         }
 
+        // конструктор класса Parallelepiped по умолчанию
         public Parallelepiped() { }
+        // конструктор класса Parallelepiped с параметрами вариант 1
         public Parallelepiped(double a, double b, double c)
         {
             Side = a;
             B = b;
             C = c;
         }
+        // конструктор класса Parallelepiped с параметрами вариант 2
         public Parallelepiped(string a, string b, string c)
         {
             Side = InputValidation(a);
             B = InputValidation(b);
             C = InputValidation(c);
         }
+        // функция подсчета объёма
         public override double GetVolume()
         {
             return Math.Round(Side * B * C, 2);
