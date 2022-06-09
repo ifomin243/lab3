@@ -7,6 +7,7 @@ namespace Model
        public double Side { get; set; }
 
        public abstract double GetVolume();
+       // Проверка ввода
        public double InputValidation(string input)
         {
             if (!double.TryParse(input, out double a))
